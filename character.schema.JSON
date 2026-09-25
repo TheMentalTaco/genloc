@@ -19,13 +19,15 @@
     "personality_desc",
     "affiliations",
     "player_visible",
-    "kanka_id"
+    "kanka_id",
+    "image_url",
+    "articles"
   ],
 
   "properties": {
     "category": {
       "type": "string",
-      "enum" : ["pc", "npc"]
+      "enum": ["pc", "npc"]
     },
     "player_name": {
       "type": "string"
@@ -80,8 +82,28 @@
     "player_visible": {
       "type": "boolean"
     },
-    "statblock": {
-      "$ref": "statblock.schema.JSON"
+    "kanka_id": {
+      "type": "integer"
+    },
+    "image_url": {
+      "type": "string",
+      "format": "url"
+    },
+    "articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "content": {
+            "type": "string",
+            "description": "Markdown or HTML text"
+          },
+          "is_private": { "type": "boolean", "default": false }
+        },
+        "required": ["title", "content"]
+      }
     }
   }
 }
