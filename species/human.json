@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/species.schema.JSON",
+  "name" : "Human",
+  "origin" : "Earth",
+  "base_desc" : "Originated from Earth and Umperias experts in genetic modification and military technology. One of the most diverse species as they are the least united species. Give allegiances to corporations more than governments",
+  "appearance_desc" : "You know what they can look like",
+  "size" : "2-7 feet tall",
+  "speed": "30 feet",
+  "features" : [
+      {"Resourceful" : "You gain Heroic Inspiration whenever you finish a Long Rest"},
+      {"Skillful" : "You gain proficiency in one skill of your choice"},
+      {"Versatile" : "You gain an Origin Feat of your choice"}
+  ]
+}

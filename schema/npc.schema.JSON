@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "NPCSchema",
+  "type": "object",
+
+  "required": [
+    "category",
+    "name",
+    "title",
+    "location",
+    "species",
+    "languages",
+    "base_desc",
+    "age",
+    "life_status",
+    "pronouns",
+    "equipment",
+    "appearance_desc",
+    "personality_desc",
+    "affiliations",
+    "player_visible"
+  ],
+
+  "properties": {
+    "category": {
+      "type": "string",
+      "const": "NPC"
+    },
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "base_desc": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "life_status": {
+      "type": "string"
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "equipment": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "appearance_desc": {
+      "type": "string"
+    },
+    "personality_desc": {
+      "type": "string"
+    },
+    "affiliations": {
+      "type": "object",
+      "properties": {
+        "org": { "type": "string" },
+        "position": { "type": "string" },
+        "org_status": { "type": "string" }
+      }
+    },
+    "player_visible": {
+      "type": "boolean"
+    },
+    "statblock": {
+      "$ref": "statblock.schema.JSON"
+    }
+  }
+}
