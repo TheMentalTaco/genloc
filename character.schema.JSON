@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
-  "title": "NPCSchema",
+  "title": "CharacterSchema",
   "type": "object",
 
   "required": [
@@ -18,13 +18,17 @@
     "appearance_desc",
     "personality_desc",
     "affiliations",
-    "player_visible"
+    "player_visible",
+    "kanka_id"
   ],
 
   "properties": {
     "category": {
       "type": "string",
-      "const": "NPC"
+      "enum" : ["pc", "npc"]
+    },
+    "player_name": {
+      "type": "string"
     },
     "name": {
       "type": "string"
